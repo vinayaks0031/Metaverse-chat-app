@@ -29,7 +29,7 @@ export default function SendMessage({endOfMessageRef}) {
     }
 
     return (
-        <from className="border-4 border-yellow-500 rounded-full px-2 py-1 max-w-2xl shadow-xl flex fixed bottom-8 w-11/12">
+        <form className="border-4 border-yellow-500 rounded-full px-2 py-1 max-w-2xl shadow-xl flex bottom-8 fixed w-11/12">
             <input
                 type="text"
                 value={inputData}
@@ -37,6 +37,6 @@ export default function SendMessage({endOfMessageRef}) {
                 placeholder={`Type your Message ${user.getUsername()}.....`}
                 className="flex-grow outline-none bg-transparent placeholder-slate-400 pr-5 pl-2" />
             <button onClick={sendMessage} className="font-bold text-yellow-500 " type="submit">Send</button>
-        </from>
+        </form>
     )
 }

@@ -6,6 +6,7 @@ import ChangeUsername from './subComponents/ChangeUsername'
 export default function Header() {
     const {user ,logout}=useMoralis();
     // user contain all the data about user
+    
     return (
         <>
             <div className="sticky top-0 z-50 header-glass">
