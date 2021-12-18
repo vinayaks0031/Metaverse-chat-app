@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { useMoralis, useMoralisQuery } from 'react-moralis';
-import SendMessage from './SendMessage';
+import Message from './subComponents/Message';
+import SendMessage from './subComponents/SendMessage';
 
 export default function Messages() {
     const endOfMessageRef = useRef(null);
@@ -13,14 +14,20 @@ export default function Messages() {
             live: true,
         }
     );
-    
-    console.log(data)
+
     return (
-        <div className="relative message-section h-[440px] z-50 pb-56">
-            {/* Message */}
+        <div className="relative message-section h-[447px] lg:h-[440px] z-50 pb-56">
+
+            <div className="p-4 px-9 space-y-3">
+                {data.map((message)=>(
+                    <Message key={message.id} message={message} />
+                ))}
+            </div>
+
             <div className="flex justify-center">
                 <SendMessage endOfMessageRef={endOfMessageRef} />
             </div>
+
             <div className='text-center text-gray-500 mt-5'>
                 <p ref={endOfMessageRef} >You're up to date {user.getUsername()} 🥳</p>
             </div>

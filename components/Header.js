@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMoralis } from 'react-moralis';
-import Avatar from './Avatar'
-import ChangeUsername from './ChangeUsername'
+import Avatar from './subComponents/Avatar'
+import ChangeUsername from './subComponents/ChangeUsername'
 
 export default function Header() {
     const {user ,logout}=useMoralis();
