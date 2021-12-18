@@ -5,9 +5,10 @@ import ChangeUsername from './ChangeUsername'
 
 export default function Header() {
     const {user ,logout}=useMoralis();
+    // user contain all the data about user
     return (
         <>
-            <div className="sticky top-0 z-50 header-glass bg-[black]">
+            <div className="sticky top-0 z-50 header-glass">
                 <div className="pt-5">
                     <p onClick={logout} className="text-2xl lg:text-4xl font-Carter underline decoration-sky-500 text-center">Welcome To MetaVerse</p>
                 </div>
