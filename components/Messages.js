@@ -4,8 +4,10 @@ import Message from './subComponents/Message';
 import SendMessage from './subComponents/SendMessage';
 
 export default function Messages() {
+
     const endOfMessageRef = useRef(null);
     const { user } = useMoralis();
+
     const { data, loading, error } = useMoralisQuery(
         'Messages',
         (query) => query.ascending('createdAt'),
@@ -16,7 +18,7 @@ export default function Messages() {
     );
 
     return (
-        <div className="relative message-section h-[475px] lg:h-[468px] z-50 pb-56">
+        <div className="message-section sticky z-40 pb-56">
 
             <div className="p-4 px-9 space-y-3">
                 {data.map((message)=>(

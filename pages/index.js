@@ -12,16 +12,17 @@ export default function Home() {
     return <Login />
   }
   return (
-    <div className=" h-screen text-white lg:px-[100px]">
+    <div className=" h-screen text-white lg:px-[100px] overflow-y-scroll overflow-hidden">
       <Head>
         <title>Metaverse chat</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <div>
-        <Header />
-        <Messages />
-      </div>
+      
+        <div>
+          <Header />
+          <Messages />
+        </div>
+  
       <div>
         <Image src="/bg5.jpg" layout="fill" />
       </div>

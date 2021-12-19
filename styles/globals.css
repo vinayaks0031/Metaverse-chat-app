@@ -21,3 +21,8 @@
     background-color: rgba(17, 25, 40, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
+.bg-image{
+    background-image: linear-gradient(to right top, #2150c3, #3961c3, #4f71c2, #6480bf, #7a8fbb, #7f95bd, #859bbe, #8ba1c0, #7ea0c8, #6da0d0, #56a0d8, #31a0df);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}

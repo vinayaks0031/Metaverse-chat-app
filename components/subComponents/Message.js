@@ -1,6 +1,7 @@
 import React from 'react'
 import { useMoralis } from 'react-moralis';
 import Avatar from './Avatar';
+import TimeAgo from 'timeago-react';
 
 export default function Message({ message }) {
     const { user } = useMoralis();
@@ -15,6 +16,7 @@ export default function Message({ message }) {
             <div className={`flex rounded-lg p-2 ${isUserMessage ? 'rounded-br-none bg-sky-700':'rounded-br-none bg-slate-700'}`}>
                 <p>{message.get('message')}</p>
             </div>
+            <TimeAgo className={`text-[10px] italic  px-2 ${isUserMessage && 'order-first'}`}  datetime={message.createdAt} />
         </div>
         <p className={`text-[9px] ${ isUserMessage &&  `text-right` }`}>{message.get('username')}</p>
         </div>
