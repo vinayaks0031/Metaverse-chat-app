@@ -18,21 +18,24 @@ export default function Messages() {
     );
 
     return (
-        <div className="message-section sticky z-40 pb-56">
+        <div>
+            <div className="message-section sticky z-40 pb-56">
 
-            <div className="p-4 px-9 space-y-3">
-                {data.map((message)=>(
-                    <Message key={message.id} message={message} />
-                ))}
+                <div className="p-4 px-9 space-y-3">
+                    {data.map((message) => (
+                        <Message key={message.id} message={message} />
+                    ))}
+                </div>
+
+                
+
+                <div className='text-center text-gray-500 mt-5'>
+                    <p ref={endOfMessageRef} >You're up to date {user.getUsername()} 🥳</p>
+                </div>
             </div>
-
             <div className="flex justify-center">
-                <SendMessage endOfMessageRef={endOfMessageRef} />
-            </div>
-
-            <div className='text-center text-gray-500 mt-5'>
-                <p ref={endOfMessageRef} >You're up to date {user.getUsername()} 🥳</p>
-            </div>
+                    <SendMessage endOfMessageRef={endOfMessageRef} />
+                </div>
         </div>
     )
 }

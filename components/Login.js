@@ -5,8 +5,8 @@ export default function Login() {
     return (
         <>
             <div className="bg-black relative ">
-                <div className=" absolute z-50 w-full">
-                    <div className="card flex flex-col items-center p-10 space-y-4 mx-[510px] mt-[150px]">
+                <div className=" absolute z-50 w-full h-screen">
+                    <div className="card flex flex-col items-center p-10 space-y-4 mx-auto mt-[150px] h-90 w-80 ">
                     <Image className="rounded-full" src="/vr1.jpg" width={200} height={200} />
                     {isAuthenticating ?
                         <button className='bg-yellow-600 rounded-lg p-5 font-bold animate-pulse' onClick={authenticate} >Entering in Metaverse...</button>:
