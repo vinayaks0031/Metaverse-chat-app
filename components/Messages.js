@@ -19,7 +19,7 @@ export default function Messages() {
 
     return (
         <div>
-            <div className="message-section sticky z-40 pb-56">
+            <div className="message-section sticky z-10 pb-56">
 
                 <div className="p-4 px-9 space-y-3">
                     {data.map((message) => (

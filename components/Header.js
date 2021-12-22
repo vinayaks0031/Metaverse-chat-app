@@ -9,7 +9,7 @@ export default function Header() {
     
     return (
         <>
-            <div className="sticky top-0 z-50 shadow-sm header-glass">
+            <div className="sticky top-0 z-20 shadow-sm header-glass">
                 <div className="pt-5">
                     <p onClick={logout} className="text-2xl lg:text-4xl font-Carter underline decoration-sky-500 text-center">Welcome To MetaVerse</p>
                 </div>

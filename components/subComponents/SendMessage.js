@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useMoralis } from 'react-moralis';
+import InputEmoji from "react-input-emoji";
 
 export default function SendMessage({endOfMessageRef}) {
 
@@ -29,14 +30,14 @@ export default function SendMessage({endOfMessageRef}) {
     }
 
     return (
-        <form className="flex z-50 fixed bottom-8 border-4 border-yellow-500 rounded-full px-2 py-1 max-w-2xl  w-11/12">
-            <input
+        <form className="flex z-50 fixed bottom-8 bg-white border-4 border-indigo-500 rounded-full pr-2 py-1 max-w-2xl  w-11/12">
+            <InputEmoji
                 type="text"
                 value={inputData}
-                onChange={(e)=> setInputData(e.target.value)}
+                onChange={setInputData}
                 placeholder={`Type your Message ${user.getUsername()}.....`}
-                className="flex-grow outline-none bg-transparent placeholder-slate-400 pr-5 pl-2" />
-            <button onClick={sendMessage} className="font-bold text-yellow-500 " type="submit">Send</button>
+                className="flex-grow outline-none placeholder-slate-400" />
+            <button onClick={sendMessage} className="font-bold text-indigo-500 " type="submit">Send</button>
         </form>
     )
 }
