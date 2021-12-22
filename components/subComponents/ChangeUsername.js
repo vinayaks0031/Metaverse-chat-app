@@ -6,7 +6,6 @@ export default function ChangeUsername() {
     
     const setUserName=()=>{
         const username=prompt(`Enter new User Name (Current is ${user.getUsername()})`)
-        console.log(username);
         if(!username) return;
         setUserData({
             username,

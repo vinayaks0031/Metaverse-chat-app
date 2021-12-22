@@ -18,7 +18,7 @@ export default function Login() {
 
             <div className="bg-black relative ">
 
-                <div className=" absolute z-50 w-[80%] ml-[10%]">
+                <div className=" absolute z-50 w-[60%] ml-[20%]">
                     <Container
                         onMouseMove={({ clientX: x, clientY: y }) => (set({ xys: calc(x, y) }))}
                         onMouseLeave={() => set({ xys: [0, 0, 1] })}
